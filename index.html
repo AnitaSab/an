@@ -1,0 +1,1309 @@
+```html
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anitin 22. rođendan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   OSNOVNO
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #493229;
+    color: #39271f;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================================
+   GLAVNA STRANICA
+========================================= */
+
+.page {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    /* KAVA S MALO MLIJEKA */
+    background: #9f846c;
+}
+
+
+/* =========================================
+   NASLOVNICA
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================================
+   IZBORNIK
+========================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(159, 132, 108, 0.97);
+
+    border-top: 1px solid rgba(73, 50, 41, 0.20);
+    border-bottom: 1px solid rgba(73, 50, 41, 0.20);
+
+    padding: 13px 7px;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 3px 7px;
+}
+
+nav a {
+    color: #493229;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8.5px;
+    font-weight: 500;
+
+    letter-spacing: 1.2px;
+
+    padding: 5px 2px;
+
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   SEKCIJE
+========================================= */
+
+section {
+    padding: 75px 25px 55px;
+
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #493229;
+
+    margin-bottom: 38px;
+}
+
+.text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+    line-height: 1.5;
+
+    max-width: 460px;
+
+    margin: 0 auto 35px;
+
+    color: #493229;
+}
+
+
+/* =========================================
+   POZIVNICA - SLIKA 1
+========================================= */
+
+.invitation {
+    width: 100%;
+    max-width: 510px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   SLIKE 2 + 3
+========================================= */
+
+.two-images {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto 38px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.two-images img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1.18;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   SLIKA 4
+========================================= */
+
+.single-image {
+    width: 100%;
+    max-width: 400px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   O SLAVLJENICI
+========================================= */
+
+.name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 58px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #493229;
+
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    color: #493229;
+
+    margin-bottom: 38px;
+}
+
+
+/* =========================================
+   GALERIJA
+========================================= */
+
+.gallery {
+    width: 100%;
+    max-width: 510px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 9px;
+}
+
+.gallery-item {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================
+   DRESS CODE
+========================================= */
+
+.dress-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    max-width: 450px;
+
+    margin: 0 auto 35px;
+
+    color: #493229;
+}
+
+
+/* DRESS CODE GALERIJA */
+
+.dress-gallery {
+    width: 100%;
+    max-width: 510px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 9px;
+}
+
+.dress-gallery-item {
+    width: 100%;
+
+    aspect-ratio: 1 / 1.2;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.dress-gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.35s ease;
+}
+
+.dress-gallery-item:hover img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================
+   IDEJE ZA POKLONE
+========================================= */
+
+.gift-list {
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+.gift-item {
+    padding: 23px 15px;
+    border-bottom: 1px solid rgba(73, 50, 41, 0.25);
+}
+
+.gift-item:first-child {
+    border-top: 1px solid rgba(73, 50, 41, 0.25);
+}
+
+.gift-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #493229;
+
+    margin-bottom: 3px;
+}
+
+.gift-subtitle {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #5d4031;
+}
+
+.gift-note {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+    font-style: italic;
+
+    line-height: 1.5;
+
+    margin-top: 38px;
+
+    color: #493229;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    background: rgba(35, 23, 18, 0.92);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 88vh;
+
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+
+    top: 17px;
+    right: 25px;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 31px;
+    font-weight: 200;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   POTVRDA DOLASKA
+========================================= */
+
+.rsvp-question {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 27px;
+}
+
+.rsvp-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    margin-bottom: 25px;
+}
+
+.rsvp-button {
+    background: transparent;
+
+    border: 1px solid #493229;
+
+    color: #493229;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    padding: 12px 32px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.rsvp-button:hover {
+    background: #493229;
+
+    color: #9f846c;
+}
+
+#response {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    min-height: 25px;
+}
+
+.contact {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.5;
+
+    margin-top: 65px;
+}
+
+
+/* =========================================
+   MOBITEL
+========================================= */
+
+@media (max-width: 500px) {
+
+    .page {
+        width: 100%;
+    }
+
+
+    /* NASLOVNICA */
+
+    .hero {
+        padding: 12px;
+    }
+
+    .hero img {
+        max-height: 88vh;
+    }
+
+
+    /* IZBORNIK */
+
+    nav {
+        padding: 11px 4px;
+    }
+
+    .nav-inner {
+        gap: 2px 5px;
+    }
+
+    nav a {
+        font-size: 7.5px;
+
+        letter-spacing: 0.9px;
+
+        padding: 6px 2px;
+    }
+
+
+    /* SEKCIJE */
+
+    section {
+        padding: 65px 18px 45px;
+    }
+
+    .section-title {
+        font-size: 28px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 32px;
+    }
+
+    .text {
+        font-size: 21px;
+    }
+
+
+    /* DVIJE SLIKE */
+
+    .two-images {
+        gap: 9px;
+    }
+
+    .two-images img {
+        aspect-ratio: 1 / 1.15;
+    }
+
+
+    /* SLIKA 4 */
+
+    .single-image {
+        max-width: 88%;
+    }
+
+
+    /* ANITA */
+
+    .name {
+        font-size: 51px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+
+    /* GALERIJA */
+
+    .gallery {
+        gap: 7px;
+    }
+
+
+    /* DRESS CODE */
+
+    .dress-text {
+        font-size: 21px;
+    }
+
+    .dress-gallery {
+        gap: 7px;
+    }
+
+
+    /* POKLONI */
+
+    .gift-item {
+        padding: 20px 12px;
+    }
+
+    .gift-title {
+        font-size: 26px;
+    }
+
+    .gift-note {
+        font-size: 20px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 94%;
+        max-height: 84vh;
+    }
+
+    .close {
+        top: 12px;
+        right: 18px;
+    }
+
+
+    /* RSVP */
+
+    .rsvp-buttons {
+        gap: 10px;
+    }
+
+    .rsvp-button {
+        padding: 11px 27px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- =====================================
+     NASLOVNICA
+===================================== -->
+
+<section id="naslovnica">
+
+    <h2 class="section-title">
+        NASLOVNICA
+    </h2>
+
+    <p class="text">
+        Dobrodošli na Anitinu rođendansku stranicu!
+    </p>
+
+</section>
+
+
+
+<!-- =====================================
+     IZBORNIK
+===================================== -->
+
+<nav>
+
+    <div class="nav-inner">
+
+        <a href="#pozivnica">
+            POZIVNICA
+        </a>
+
+        <a href="#rodendan">
+            O ROĐENDANU
+        </a>
+
+        <a href="#slavljenica">
+            JELOVNIK
+        </a>
+
+        <a href="#galerija">
+            IDEJE ZA POKLONE
+        </a>
+
+        <a href="#dresscode">
+            DRESS CODE
+        </a>
+
+        <a href="#pokloni">
+            IDEJE ZA POKLONE
+        </a>
+
+        <a href="#potvrda">
+            POTVRDA DOLASKA
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================
+     POZIVNICA
+===================================== -->
+
+<section id="pozivnica">
+
+    <h2 class="section-title">
+        POZIVNICA
+    </h2>
+
+    <img
+        src="slika1.jpg"
+        alt="Pozivnica"
+        class="invitation"
+    >
+
+</section>
+
+
+
+<!-- =====================================
+     O ROĐENDANU
+===================================== -->
+
+<section id="rodendan">
+
+    <h2 class="section-title">
+        O ROĐENDANU
+    </h2>
+
+    <p class="text">
+        Espresso martini je popularan, elegantan koktel koji spaja gorčinu kave i slatkoću likera uz energiju votke.
+		Izmislio ga je barmen Dick Bradsell u Londonu 1980-ih godina.
+		Služi se kao savršeni spoj stimulansa (kofeina) i opuštanja (alkohola), često nakon večere
+    </p>
+
+
+    <div class="two-images">
+
+        <img
+            src="slika2.JFIF"
+            alt="Slika 2"
+        >
+
+        <img
+            src="slika3.JFIF"
+            alt="Slika 3"
+        >
+
+    </div>
+
+
+    <p class="text">
+        Recept:
+		40–50 ml votke
+		<br><br>
+		30 ml likera od kave
+		<br><br>
+		30 ml ohlađenog ili svježe skuhanog espressa
+		<br><br>
+		10–15 ml šećernog sirupa (po želji)
+		<br><br>
+		Kockice leda
+		<br><br>
+		3 zrna kave za dekoraciju (simboliziraju zdravlje, sreću i bogatstvo)
+        
+    </p>
+
+
+    <img
+        src="slika4.JPG"
+        alt="Slika 4"
+        class="single-image"
+    >
+
+</section>
+
+
+
+<!-- =====================================
+     O SLAVLJENICI
+===================================== -->
+
+<section id="jelovnik">
+
+    <h2 class="section-title">
+        JELOVNIK
+    </h2>
+
+
+    <h1 class="gift-title">
+        Glavno jelo
+    </h1>
+
+
+    <p class="subtitle">
+        Pesto tjestenina s piletinom
+		<br><br>
+		Njoke u umaku od paradajza sa svinjetinom
+		<br><br>
+		Čevapi i zapečen kruh za dečke
+	
+		</p>
+	
+	 <h1 class="gift-title">
+        Desert
+    </h1>
+	<p class="subtitle">
+        Više vrsta keksića
+		<br><br>
+		Čupavci
+		<br><br>
+		Torta
+	</p>
+	
+	 <h1 class="gift-title">
+        Pića
+    </h1>
+	<p class="subtitle">
+        Espresso martini
+		<br><br>
+		Vino
+		<br><br>
+		Pivo (za Stjepana)
+		<br><br>
+		Sokovi
+	</p>
+	
+
+
+    <div class="two-images">
+
+        <img
+            src="slika5.JPG"
+            alt="Slika 5"
+        >
+
+        <img
+            src="slika6.JPG"
+            alt="Slika 6"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     GALERIJA
+===================================== -->
+
+<section id="ideje za poklone">
+
+    <h2 class="section-title">
+        IDEJE ZA POKLONE
+    </h2>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="slika7.JPG" alt="Slika 7">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika8.JPG" alt="Slika 8">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika9.webp" alt="Slika 9">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika10.webp" alt="Slika 10">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika11.webp" alt="Slika 11">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika12.jpg" alt="Slika 12">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika13.JPG" alt="Slika 13">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika14.png" alt="Slika 14">
+        </div>
+
+        <div class="gallery-item">
+            <img src="slika15.webp" alt="Slika 15">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     IDEJE ZA POKLONE
+===================================== -->
+
+<section id="pokloni">
+
+    <h2 class="section-title">
+        OBJAŠNJENJE POKLONA
+    </h2>
+
+
+    <div class="gift-list">
+
+
+        <div class="gift-item">
+
+            <div class="gift-title">
+                CD
+            </div>
+
+            <div class="gift-subtitle">
+                Magazin, Severina, Prljavo kazalište, Plavi orkestar, Smokie,
+				Frank Sinatra, Britney Spears, Elvis (ALI NE NAJVEĆI HITOVI, TAJ IMAM),
+				božićne pjesme
+            </div>
+
+        </div>
+
+
+        <div class="gift-item">
+
+            <div class="gift-title">
+                Knjige
+            </div>
+
+            <div class="gift-subtitle">
+                Knjige sa slika ili se obratite mami, ona ima još slika knjiga koje želim.
+            </div>
+
+        </div>
+
+
+        <div class="gift-item">
+
+            <div class="gift-title">
+                Sjajila za usta
+            </div>
+
+            <div class="gift-subtitle">
+                Kiko Milano, Essence, Catrice, Maybelline, Nyx. 
+				Neka tamnija boja ili prozirna.
+            </div>
+
+        </div>
+
+
+       <div class="gift-item">
+
+            <div class="gift-title">
+                Šalice
+            </div>
+
+            <div class="gift-subtitle">
+                Jesenske, božićne, lijepe.
+            </div>
+
+        </div>
+
+<div class="gift-item">
+
+            <div class="gift-title">
+                Čizme
+            </div>
+
+            <div class="gift-subtitle">
+                Kaubojske, mogu biti crne ili smeđe sa šarama koje nisu iste boje kao čizma.
+            </div>
+
+        </div>
+		
+		<div class="gift-item">
+
+            <div class="gift-title">
+                Deka
+            </div>
+
+            <div class="gift-subtitle">
+                Lijepa jesenska mekana deka u narančastim ili smeđim bojama.
+            </div>
+
+        </div>
+		
+		<div class="gift-item">
+
+            <div class="gift-title">
+                Slatkiši i slaniši
+            </div>
+
+            <div class="gift-subtitle">
+                Gumeni bomboni (Haribo rainbow (sa slike), Haribo pixel, Trolli sour glowworms, hitschies sour mix, trolli dinorex, Saure Staber iz spara u obliku pravokutnika),
+				Nutella, smokići (Smoki i Bobi), čips (Lays MAX DEEP CUT Twisted paprika), Doritos nacho sir
+            </div>
+
+        </div>
+		
+    <p class="dress-text">
+        Slobodno kupite i stvari koje nisu na popisu    :)
+    </p>
+
+
+    </div>
+
+
+    <p class="gift-note">
+        
+		
+    </p>
+
+</section>
+
+<!-- =====================================
+     DRESS CODE
+===================================== -->
+
+<section id="dresscode">
+
+    <h2 class="section-title">
+        DRESS CODE
+    </h2>
+
+
+    <p class="dress-text">
+        Neka vam ovo bude inspiracija za obući se,
+        nadam se da neće biti velikih razočaranja.
+    </p>
+
+
+    <div class="dress-gallery">
+
+        <div class="dress-gallery-item">
+            <img src="slika16.jpg" alt="Dress code inspiracija 1">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika17.jpg" alt="Dress code inspiracija 2">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika18.jpg" alt="Dress code inspiracija 3">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika19.jpg" alt="Dress code inspiracija 4">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika20.jfif" alt="Dress code inspiracija 5">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika21.jpg" alt="Dress code inspiracija 6">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika22.jfif" alt="Dress code inspiracija 7">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika23.jfif" alt="Dress code inspiracija 8">
+        </div>
+
+        <div class="dress-gallery-item">
+            <img src="slika24.jfif" alt="Dress code inspiracija 9">
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     POTVRDA DOLASKA
+===================================== -->
+
+<section id="potvrda">
+
+    <h2 class="section-title">
+        POTVRDA DOLASKA
+    </h2>
+
+
+    <p class="rsvp-question">
+        Dolaziš li?
+    </p>
+
+
+    <div class="rsvp-buttons">
+
+        <button
+            class="rsvp-button"
+            onclick="answer('DA')"
+        >
+            DA
+        </button>
+
+
+        <button
+            class="rsvp-button"
+            onclick="answer('NE')"
+        >
+            NE
+        </button>
+
+    </div>
+
+
+    <p id="response"></p>
+
+
+    <p class="contact">
+        Ukoliko ima pitanja, slobodno se javite.
+    </p>
+
+</section>
+
+
+</div>
+
+
+
+<!-- =====================================
+     LIGHTBOX
+===================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox(event)"
+>
+
+    <span
+        class="close"
+        onclick="closeLightbox(event)"
+    >
+        ×
+    </span>
+
+
+    <img
+        id="lightbox-image"
+        src=""
+        alt="Povećana fotografija"
+    >
+
+</div>
+
+
+
+<script>
+
+/* =====================================
+   GALERIJA + DRESS CODE
+===================================== */
+
+const clickableImages =
+    document.querySelectorAll(
+        ".gallery-item img, .dress-gallery-item img"
+    );
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxImage =
+    document.getElementById("lightbox-image");
+
+
+clickableImages.forEach(function(image) {
+
+    image.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        lightboxImage.src = this.src;
+
+        lightbox.classList.add("show");
+
+    });
+
+});
+
+
+/* =====================================
+   ZATVARANJE POVEĆANE SLIKE
+===================================== */
+
+function closeLightbox(event) {
+
+    if (
+        event.target === lightbox ||
+        event.target.classList.contains("close")
+    ) {
+
+        lightbox.classList.remove("show");
+
+        lightboxImage.src = "";
+
+    }
+
+}
+
+
+/* =====================================
+   ESC ZA ZATVARANJE
+===================================== */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        lightbox.classList.remove("show");
+
+        lightboxImage.src = "";
+
+    }
+
+});
+
+
+/* =====================================
+   POTVRDA DOLASKA
+===================================== */
+
+function answer(choice) {
+
+    const response =
+        document.getElementById("response");
+
+
+    if (choice === "DA") {
+
+        response.textContent =
+            "Točan odgovor.";
+
+    } else {
+
+        response.textContent =
+            "Krivi odgovor. Probaj opet.";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
+```
